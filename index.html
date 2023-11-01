@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" lang="es" />
+    <title>Agregar Tarea</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-
+      T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+  </head>
+  <body>
+    <header class="container-encabezado text-center mt-3"></header>
+    <div class="container-general">
+      <h2 class="text-center mt-3">Nueva tarea</h2>
+
+      <form action="" id="form">
+        <div class="formulario-container container w-50" id="formulario">
+          <div class="form-floating">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingTitulo"
+              placeholder="Título"
+              required
+            />
+            <label for="floatingDuracion"
+              ><i class="bi bi-pencil-square"></i> Título de la tarea
+            </label>
+          </div>
+          <div class="form-floating mt-1">
+            <textarea
+              class="form-control"
+              placeholder="Descripción de la tarea"
+              id="floatingTextarea"
+              style="height: 100px"
+              required
+            ></textarea>
+            <label for="floatingTextarea"
+              ><i class="bi bi-list-task"></i> Descripción</label
+            >
+          </div>
+          <div class="form-floating mt-1">
+            <input
+              type="number"
+              class="form-control"
+              id="floatingTiempo"
+              placeholder="Tiempo"
+              required
+            />
+            <label for="floatingTiempo"
+              ><i class="bi bi-hourglass-split"></i> Tiempo de duración</label
+            >
+          </div>
+          <div class="form-floating mt-1">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingImagen"
+              placeholder="Adjunte una imagen"
+              required
+            />
+            <label for="floatingImagen"
+              ><i class="bi bi-images"></i> Adjunte una imagen
+            </label>
+          </div>
+          <div class="form-floating mt-1">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingResponsable"
+              placeholder="Responsable"
+              required
+            />
+            <label for="floatingResponsable"
+              ><i class="bi bi-person"></i> Responsable</label
+            >
+          </div>
+          <div>
+            <select class="form-select mt-1" id="select-option" required>
+              <option value="-1" disabled selected>Seleccione un estado</option>
+              <option value="Pendiente">Pendiente</option>
+              <option value="En proceso">En proceso</option>
+              <option value="Testing">Testing</option>
+              <option value="Completado">Completado</option>
+            </select>
+          </div>
+
+          <p id="mensaje"></p>
+
+          <button
+            class="btn btn-success justify-content-center container mt-1 mb-3"
+            type="submit"
+            id="submitBtn"
+          >
+            Enviar tarea
+          </button>
+        </div>
+      </form>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
